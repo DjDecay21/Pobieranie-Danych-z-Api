@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="app.js"></script>
+
+  <h1>User Management App</h1>
+
+  <div>
+    <h2>Get User</h2>
+    <button onclick="getUser()">Get User</button>
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div>
+    <h2>Add User</h2>
+    <!-- Dodaj formularz do dodawania użytkownika -->
+    <form onsubmit="addUser(event)">
+      <label for="addFirstName">First Name:</label>
+      <input type="text" id="addFirstName" required>
+      <label for="addLastName">Last Name:</label>
+      <input type="text" id="addLastName" required>
+      <label for="addPassword">Password:</label>
+      <input type="password" id="addPassword" required>
+      <label for="addEmail">Email:</label>
+      <input type="text" id="addEmail" required>
+      <label for="addPhone">Phone:</label>
+      <input type="text" id="addPhone" required>
+      <button type="submit">Add User</button>
+    </form>
+    <pre id="addUserResult"></pre>
+  </div>
+
+  <div>
+    <h2>Update User</h2>
+    <!-- Dodaj formularz do aktualizowania użytkownika -->
+    <form onsubmit="updateUser(event)">
+      <label for="updateUserId">User ID:</label>
+      <input type="number" id="updateUserId" required>
+      <label for="updateFirstName">First Name:</label>
+      <input type="text" id="updateFirstName" required>
+      <label for="updateLastName">Last Name:</label>
+      <input type="text" id="updateLastName" required>
+      <label for="updatePassword">Password:</label>
+      <input type="password" id="updatePassword" required>
+      <label for="updateEmail">Email:</label>
+      <input type="text" id="updateEmail" required>
+      <label for="updatePhone">Phone:</label>
+      <input type="text" id="updatePhone" required>
+      <button type="submit">Update User</button>
+    </form>
+    <pre id="updateUserResult"></pre>
+</div>
+
+
+  <div>
+    <h2>Delete User</h2>
+    <!-- Dodaj formularz do usuwania użytkownika -->
+    <form onsubmit="deleteUser(event)">
+      <label for="deleteUserId">User ID:</label>
+      <input type="number" id="deleteUserId" required>
+      <button type="submit">Delete User</button>
+    </form>
+    <pre id="deleteUserResult"></pre>
+  </div>
+
+  <div>
+    <h2>Test</h2>
+    <form name="testForm" onsubmit="test(event)">
+        <button type="submit">Test Web</button>
+    </form>
+    
+    <pre id="testResult"></pre>
+  </div>
+</body>
+</html>
